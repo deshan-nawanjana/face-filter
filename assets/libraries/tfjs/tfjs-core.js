@@ -4368,16 +4368,16 @@
         function e() {}
         return e.prototype.fetch = function(e, t) {
             if(e.indexOf('face_landmarks_detection') > -1 && e.indexOf('.json') > -1) {
-                e = './assets/libraries/tfjs/models/face_landmarks_detection.json'
+                e = 'https://deshan-nawanjana.github.io/face-filter/assets/libraries/tfjs/models/face_landmarks_detection.json'
             }
             if(e.indexOf('face_landmarks_detection') > -1 && e.indexOf('.bin') > -1) {
-                e = './assets/libraries/tfjs/models/face_landmarks_detection.bin'
+                e = 'https://deshan-nawanjana.github.io/face-filter/assets/libraries/tfjs/models/face_landmarks_detection.bin'
             }
             if(e.indexOf('face_detection') > -1 && e.indexOf('.json') > -1) {
-                e = './assets/libraries/tfjs/models/face_detection.json'
+                e = 'https://deshan-nawanjana.github.io/face-filter/assets/libraries/tfjs/models/face_detection.json'
             }
             if(e.indexOf('face_detection') > -1 && e.indexOf('.bin') > -1) {
-                e = './assets/libraries/tfjs/models/face_detection.bin'
+                e = 'https://deshan-nawanjana.github.io/face-filter/assets/libraries/tfjs/models/face_detection.bin'
             }
 
             t.cache = 'force-cache'
