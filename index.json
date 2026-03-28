@@ -1,0 +1,38 @@
+[
+  {
+    "id": "model_1",
+    "name": "Deal With It Glasses",
+    "author": "BasicModel",
+    "source": "https://sketchfab.com/3d-models/deal-with-it-glasses-original-1c5b6d8f43754e3ba9643b96f6e4c27e",
+    "options": {
+      "scale": 0.52
+    }
+  },
+  {
+    "id": "model_2",
+    "name": "Heart Glasses",
+    "author": "maximkuzlin",
+    "source": "https://sketchfab.com/3d-models/heart-glasses-ef812c7e7dc14f6b8783ccb516b3495c",
+    "options": {
+      "scale": 0.035
+    }
+  },
+  {
+    "id": "model_3",
+    "name": "Sunglasses",
+    "author": "martn00",
+    "source": "https://sketchfab.com/3d-models/sunglasses-57185ae95254443c937b69de5c22af97",
+    "options": {
+      "scale": 0.1
+    }
+  },
+  {
+    "id": "model_4",
+    "name": "Mustache",
+    "author": "assetfactory",
+    "source": "https://sketchfab.com/3d-models/mustache-f9ffa8cf88df43409543c476950995b5",
+    "options": {
+      "scale": 0.23
+    }
+  }
+]

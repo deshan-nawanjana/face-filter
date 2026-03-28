@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
+  user-select: none;
+  font-family: "Roboto";
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - calc(100vh - 100%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  top: 0px;
+}
+
+video {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  opacity: 0;
+  left: 0px;
+  top: 0px;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  max-width: 100vh;
+  background-color: #222;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.initial-screen {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.enable-button {
+  height: 40px;
+  margin: 0px;
+  padding: 0px 20px 0px 46px;
+  background-color: #06c;
+  background-image: url(./assets/icons/camera.svg);
+  background-position: 15px center;
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  transition: background-color 0.15s;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+.enable-button:not(:disabled):active {
+  background-color: #024e9b;
+}
+
+.enable-button:disabled {
+  background-color: #555;
+  cursor: default;
+  opacity: 0.55;
+}
+
+.enable-error {
+  color: #d71919;
+}
+
+.camera-screen {
+  overflow: hidden;
+  position: relative;
+}
+
+canvas {
+  height: 100%;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+@media (orientation: portrait) {
+  canvas {
+    left: calc(calc(100vw - 100vh) / 2);
+  }
+}
+
+.camera-spinner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  background-image: url(./assets/icons/spinner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px auto;
+  left: 0px;
+  top: 0px;
+}
+
+.camera-options {
+  position: absolute;
+  height: 100px;
+  background-color: #0008;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.camera-screen[data-loading] #filter {
+  visibility: hidden;
+}
+
+.camera-screen[data-loading] .camera-spinner {
+  background-color: #0005;
+  visibility: visible;
+}
+
+.filter {
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 60px;
+  margin: 0px;
+  border: none;
+}
+
+.filter[data-active] {
+  outline: 3px solid #e3bd11;
+  opacity: 0.85;
+}
+
+.filter#model_1 {
+  background-image: url(./assets/models/filters/model_1.jpg);
+}
+
+.filter#model_2 {
+  background-image: url(./assets/models/filters/model_2.jpg);
+}
+
+.filter#model_3 {
+  background-image: url(./assets/models/filters/model_3.jpg);
+}
+
+.filter#model_4 {
+  background-image: url(./assets/models/filters/model_4.jpg);
+}
+
+.filter-details {
+  position: absolute;
+  width: 100%;
+  height: 24px;
+  padding-top: 10px;
+  left: 0px;
+  bottom: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0008;
+}
+
+.filter-details a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+}
+
+.filter-details a:hover {
+  text-decoration: underline;
+}
+
+.loading-screen {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.loading-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  background-image: url(./assets/icons/icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.75;
+}
+
+.loading-message {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.loading-bar {
+  width: 180px;
+  height: 6px;
+  background-color: #fff2;
+}
+
+.loading-bar-value {
+  height: inherit;
+  background-color: #06c;
+  transition: width 0.1s;
+}

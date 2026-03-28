@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- style -->
+  <link rel="stylesheet" href="./index.css">
+  <!-- libraries : three -->
+  <script src="./assets/libraries/three/three.min.js"></script>
+  <script src="./assets/libraries/three/GLTFLoader.js"></script>
+  <!-- libraries : tfjs -->
+  <script src="./assets/libraries/tfjs/tfjs-core.js"></script>
+  <script src="./assets/libraries/tfjs/tfjs-converter.js"></script>
+  <script src="./assets/libraries/tfjs/tfjs-backend-webgl.js"></script>
+  <script src="./assets/libraries/tfjs/face-landmarks-detection.js"></script>
+  <!-- libraries : vue -->
+  <script src="./assets/libraries/vue.min.js"></script>
+  <!-- script -->
+  <script src="./index.js" type="module" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>Face Filter</title>
+</head>
+
+<body>
+  <!-- app root -->
+  <div id="app">
+    <!-- loading screen -->
+    <div class="screen loading-screen" v-if="screen === 'loading'">
+      <div class="loading-icon"></div>
+      <div class="loading-message">
+        {{progress.message}}
+      </div>
+      <div class="loading-bar">
+        <div class="loading-bar-value" :style="{ width: progress.value + '%' }"></div>
+      </div>
+    </div>
+    <!-- initial screen -->
+    <div class="screen initial-screen" v-if="screen === 'initial'">
+      <button class="enable-button" @click="enableCamera" :disabled="initial.busy">
+        Enable Camera
+      </button>
+      <div class="enable-error" v-if="initial.error">
+        {{initial.error}}
+      </div>
+    </div>
+    <!-- camera screen -->
+    <div class="screen camera-screen" v-if="screen === 'camera'" :data-loading="filters.loading">
+      <!-- camera canvas -->
+      <canvas id="stream" width="720" height="720"></canvas>
+      <canvas id="filter" width="720" height="720"></canvas>
+      <!-- camera spinner -->
+      <div class="camera-spinner"></div>
+      <!-- filter details -->
+      <div class="filter-details" v-if="filters.current">
+        <a :href="filters.current.source" target="_blank">
+          {{filters.current.name}} by {{filters.current.author}}
+        </a>
+      </div>
+      <!-- footer options -->
+      <div class="camera-options">
+        <button class="filter" v-for="item in filters.list" @click="loadFilter(item)"
+          :data-active="item === filters.current" :id="item.id">
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
