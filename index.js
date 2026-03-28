@@ -281,7 +281,7 @@ new Vue({
   // mounted listener
   async mounted() {
     // load filters list
-    this.filters.list = await fetch("index.json").then(resp => resp.json())
+    this.filters.list = await fetch(`${baseURL}index.json`).then(resp => resp.json())
     // update progress
     this.progress = { value: 10, message: "Loading assets..." }
     // load occlusion model
