@@ -22,3 +22,6 @@ Face filter apps are very popular on social media platforms. The basic functiona
 &ensp;|&ensp;
 [YouTube](https://www.youtube.com/@deshan-nawanjana)
 &ensp;|&ensp;
+[X](https://x.com/DeshanNawanjana)
+&ensp;|&ensp;
+[Instagram](https://www.instagram.com/_d.boy_/)
