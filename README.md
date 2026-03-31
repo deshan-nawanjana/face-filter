@@ -14,9 +14,9 @@ Face filter apps are very popular on social media platforms. The basic functiona
 
 [Deshan.lk](https://deshan.lk/)
 &ensp;|&ensp;
-[DNJS](https://dnjs.lk/)
-&ensp;|&ensp;
 [LinkedIn](https://www.linkedin.com/in/deshan-nawanjana/)
+&ensp;|&ensp;
+[Facebook](https://www.facebook.com/mr.dnjs)
 &ensp;|&ensp;
 [GitHub](https://github.com/deshan-nawanjana)
 &ensp;|&ensp;
@@ -25,3 +25,5 @@ Face filter apps are very popular on social media platforms. The basic functiona
 [X](https://x.com/DeshanNawanjana)
 &ensp;|&ensp;
 [Instagram](https://www.instagram.com/_d.boy_/)
+&ensp;|&ensp;
+[Reddit](https://www.reddit.com/user/DeshanNawanjana/)
